@@ -8,4 +8,4 @@ request_params = request_content.reduce([]) do |params, (key, value)|
 end
 rest = RestClient.get('https://chatbot-api.userlocal.jp/api/chat?' + request_params.join('&').to_s)
 result = JSON.parse(rest)
-p result
+p result['result']
