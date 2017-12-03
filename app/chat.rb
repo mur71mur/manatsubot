@@ -2,8 +2,9 @@ require 'json'
 require 'rest-client'
 require "cgi"
 
-module chatbot-api
-  def chat(key,message)
+module Chatbot
+
+  def chat(key, message)
     request_content = {'key' => key, 'message' => CGI.escape(message)}
     request_params = request_content.reduce([]) do |params, (key, value)|
       params << "#{key.to_s}=#{value}"
@@ -12,4 +13,7 @@ module chatbot-api
     result = JSON.parse(rest)
     return result['result']
   end
+
+  module_function :chat
+
 end
