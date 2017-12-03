@@ -8,4 +8,6 @@ gem 'sinatra'
 gem 'json'
 gem 'rest-client'
 gem 'sinatra-contrib'
+gem 'twitter'
+gem 'pry'
 # gem "rails"
