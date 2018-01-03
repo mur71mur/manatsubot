@@ -1,6 +1,6 @@
 require 'twitter'
 
 module Twitter
-  def
+  def nanika
   end
 end
